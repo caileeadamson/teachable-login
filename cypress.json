@@ -1,0 +1,6 @@
+{
+  "baseUrl": "https://takehome.zeachable.com",
+  "video": false,
+  "chromeWebSecurity": false,
+  "_comment_": "The above is added due to an error between https vs http with the url, see Github issue here: https://github.com/cypress-io/cypress/issues/2911"
+}
