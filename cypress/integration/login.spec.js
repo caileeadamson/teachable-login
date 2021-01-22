@@ -1,15 +1,13 @@
 describe('Login form tests', () => {
-    beforeEach(function() {
+    beforeEach(() => {
         // Before each test, runs a shared command to visit the login url
         cy.visitLoginPage(); 
     });
     it('Verifies Successful Login', () => {
         cy.get('h1.text-center').should('be.visible'); // Login page header is visible
-        cy.fixture('loginInfo.json').as('loginInfo');
-        cy.get('@loginInfo').then((loginInfo) => {
-        cy.get('#user_email').should('be.visible').type(loginInfo.email);
-        cy.get('#user_email').invoke('val').should('contain', loginInfo.email);
-        cy.get('#user_password').should('be.visible').type(loginInfo.password);
+        cy.get('#user_email').should('be.visible').type(Cypress.env('email'));
+        cy.get('#user_email').invoke('val').should('contain', Cypress.env('email'));
+        cy.get('#user_password').should('be.visible').type(Cypress.env('password'));
         cy.get('#user_password').invoke('val').should('not.be.empty');
         cy.get('.btn').should('be.visible').should('be.enabled').click();  
         cy.wait('@postEvents').should((xhr) => {
@@ -17,7 +15,6 @@ describe('Login form tests', () => {
         });                
         cy.url().should('contain', 'takehome.zeachable');
         cy.get('#search-courses').should('be.visible');
-        });
     });
 
 

@@ -1,7 +1,23 @@
 {
-    "scripts": {
-
+  "name": "teachable-login",
+  "version": "1.0.0",
+  "description": "Follow these steps to run these tests:",
+  "main": "index.js",
+  "scripts": {
         "cypress:open": "npx cypress open",
         "cypress:ci": "cypress run --headless"
-    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caileeadamson/teachable-login.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caileeadamson/teachable-login/issues"
+  },
+  "homepage": "https://github.com/caileeadamson/teachable-login#readme",
+  "devDependencies": {
+    "cypress": "^6.3.0"
+  }
 }
