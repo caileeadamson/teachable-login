@@ -22,7 +22,7 @@ describe('Login form tests', () => {
         cy.get('.btn').click();
         cy.wait('@postEvents');
         cy.get('.alert').should('be.visible').invoke('text').should('include', 'Invalid email or password');
-        cy.confirmsLoginUrl()
+        cy.confirmsLoginUrl();
     });
 
 
@@ -32,7 +32,7 @@ describe('Login form tests', () => {
         cy.get('.btn').click();
         cy.wait('@postEvents');
         cy.get('.alert').should('be.visible').invoke('text').should('include', 'Invalid email or password');
-        cy.confirmsLoginUrl()
+        cy.confirmsLoginUrl();
 
     });
 
