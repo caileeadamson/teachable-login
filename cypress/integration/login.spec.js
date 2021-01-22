@@ -1,4 +1,4 @@
-describe('Login form tests', () => {
+describe('Login Form Tests', () => {
     beforeEach(() => {
         // Before each test, runs a shared command to visit the login url
         cy.visitLoginPage(); 

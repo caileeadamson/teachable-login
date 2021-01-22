@@ -4,8 +4,8 @@
   "description": "Follow these steps to run these tests:",
   "main": "index.js",
   "scripts": {
-        "cypress:open": "npx cypress open",
-        "cypress:ci": "cypress run --headless"
+    "cypress:open": "npx cypress open",
+    "cypress:ci": "cypress run --headless"
   },
   "repository": {
     "type": "git",
